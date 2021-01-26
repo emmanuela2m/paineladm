@@ -1,19 +1,30 @@
 <?php
 
-function verificalogin() {
-    //no futuro as informaçãoes são
-    //trazidos no banco de dados
-    $usuario = 'manu';
-    $senha = '123456';
+function verificaLogin() {
+    //No futuro as informações são 
+    //trazidos do banco de dados
 
-    //verificar se as informações 
-    //passadas pelo usuario é igual a que estão no banco.
-    if ($_POST['usuario'] == $usuario &&
-            $_POST['senha'] == $senha) {
-        //criar dados na session
-        $_SESSION['usuario'] = $usuario;
-        return TRUE;
+    $usuario = 'manu';
+    $senha = '12345678';
+
+    //Verificar se as informações passadados 
+    //pelo usuário é igual a que estão no banco de dados.
+
+    if ($_POST) {
+        if ($_POST ['usuario'] == $usuario &&
+                $_POST ['senha'] == $senha) {
+
+            //Cria dados na SESSION
+            $_SESSION ['usuario'] = $usuario;
+            return TRUE;
+        } else {
+            return FALSE;
+        }
     } else {
-        return false;
+        if (isset($_SESSION['usario'] )) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
     }
 }

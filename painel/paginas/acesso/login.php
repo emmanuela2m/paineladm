@@ -26,7 +26,7 @@
 
                     <form action="?pg=dashboard" method="post">
                         <div class="input-group mb-3">
-                            <input name="usuario" type="text" class="form-control" placeholder="Usuario">
+                            <input name="usuario" type="text" class="form-control" placeholder="Usuário">
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-envelope"></span>
@@ -59,16 +59,22 @@
                     </form>
 
                     <div class="social-auth-links text-center mt-2 mb-3">
-                        <a href="#" class="btn btn-block btn-primary"> Entar
-                           
+                        
+                        <a href="#" class="btn btn-block btn-primary">
+                            Entrar
                         </a>
-                        <a href="?pg=inicio" class="btn btn-block btn-danger">
-                          voltar ao site
+                        <a href="?pg=inicial" class="btn btn-block btn-danger">
+                             Voltar ao Site
                         </a>
                     </div>
                     <!-- /.social-auth-links -->
 
-                   
+                    <p class="mb-1">
+                        <a href="forgot-password.html">I forgot my password</a>
+                    </p>
+                    <p class="mb-0">
+                        <a href="register.html" class="text-center">Register a new membership</a>
+                    </p>
                 </div>
                 <!-- /.card-body -->
             </div>

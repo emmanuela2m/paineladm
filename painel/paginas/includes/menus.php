@@ -1,3 +1,4 @@
+
 <!-- Preloader -->
 <div class="preloader">
     <img src="dist/img/AdminLTELogo.png" alt="Painel Adm" height="60" width="60">
@@ -14,7 +15,7 @@
             <a href="index3.html" class="nav-link">Home</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="#" class="nav-link">Contact</a>
+            <a href="#" class="nav-link">Contato</a>
         </li>
     </ul>
 
@@ -43,7 +44,7 @@
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="?pg=inicio" class="brand-link">
         <img src="painel/dist/img/dddd.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         <p>Painel Adm</p>
     </a>
@@ -56,7 +57,7 @@
                 <img src="painel/dist/img/avatar3.png" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Emmanuela Souza</a>
+                <a href="?pg=inicio" class="d-block">Emmanuela Souza</a>
             </div>
         </div>
 
@@ -92,10 +93,28 @@
                 </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/widgets.html" class="nav-link">
+                    <a href="?pg=produtos" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
                             Produtos
+
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="?pg=servicos" class="nav-link">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Serviços
+
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="?pg=contato" class="nav-link">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Contato
 
                         </p>
                     </a>

@@ -1,1 +1,1 @@
-<a href="?pg=login">Área administrativa</a>
+<a href="?pg=login">Área Administrativa</a>
