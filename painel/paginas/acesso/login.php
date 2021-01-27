@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Login</title>
+        <title>Painel Administrativo</title>
 
         <!-- Google Font: Source Sans Pro -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -19,10 +19,10 @@
             <!-- /.login-logo -->
             <div class="card card-outline card-primary">
                 <div class="card-header text-center">
-                    <a href="../../index2.html" class="h1"><b>Painel Administrativo</b></a>
+                    <a href="#" class="h1"><b>Painel</b> Administrativo</a>
                 </div>
                 <div class="card-body">
-                    <p class="login-box-msg">Sign in to start your session</p>
+                    <p class="login-box-msg">Entre com seus dados de acesso</p>
 
                     <form action="?pg=dashboard" method="post">
                         <div class="input-group mb-3">
@@ -42,39 +42,14 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-8">
-                                <div class="icheck-primary">
-                                    <input type="checkbox" id="remember">
-                                    <label for="remember">
-                                        Remember Me
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- /.col -->
-                            <div class="col-4">
-                                <button type="submit" class="btn btn-primary btn-block">Sign In</button>
-                            </div>
-                            <!-- /.col -->
+                            <div class="col">
+                                <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                            </div>                            
                         </div>
                     </form>
-
                     <div class="social-auth-links text-center mt-2 mb-3">
-                        
-                        <a href="#" class="btn btn-block btn-primary">
-                            Entrar
-                        </a>
-                        <a href="?pg=inicial" class="btn btn-block btn-danger">
-                             Voltar ao Site
-                        </a>
+                        <a href="?pg=inicial" class="btn btn-block btn-danger">Voltar ao site</a>
                     </div>
-                    <!-- /.social-auth-links -->
-
-                    <p class="mb-1">
-                        <a href="forgot-password.html">I forgot my password</a>
-                    </p>
-                    <p class="mb-0">
-                        <a href="register.html" class="text-center">Register a new membership</a>
-                    </p>
                 </div>
                 <!-- /.card-body -->
             </div>

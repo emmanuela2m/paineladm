@@ -5,23 +5,22 @@ function verificaLogin() {
     //trazidos do banco de dados
 
     $usuario = 'manu';
-    $senha = '12345678';
+    $senha = '123456';
 
-    //Verificar se as informações passadados 
-    //pelo usuário é igual a que estão no banco de dados.
+    //Verificar se as informações passados 
+    //pelo usuário é igual a que estão no banco.
 
     if ($_POST) {
-        if ($_POST ['usuario'] == $usuario &&
-                $_POST ['senha'] == $senha) {
-
+        if ($_POST['usuario'] == $usuario &&
+                $_POST['senha'] == $senha) {
             //Cria dados na SESSION
-            $_SESSION ['usuario'] = $usuario;
+            $_SESSION['usuario'] = $usuario;
             return TRUE;
         } else {
             return FALSE;
         }
     } else {
-        if (isset($_SESSION['usario'] )) {
+        if (isset($_SESSION['usuario'])) {
             return TRUE;
         } else {
             return FALSE;
