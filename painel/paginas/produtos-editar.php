@@ -49,6 +49,10 @@
                                         <input type="text" name="valor" value="<?php echo $dado['valor']; ?>" class="form-control" id="valor">
 
                                     </div>
+                                    
+                                    <input type="hidden" value="<?php echo $dado['valor']; ?>" name="id">
+
+                                    
                                 </div>
                                 <!-- /.card-body -->
                                 

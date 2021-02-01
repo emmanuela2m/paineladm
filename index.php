@@ -49,21 +49,36 @@ if ($pg) {
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 //Função para atualização do usuário
                 //Função para atualização do usuário
-                $nome = $_POST [nome];
-                $tipo_= $_POST [tipo];
-                $valor = $_POST [valor];
-                
+                $nome = $_POST ['id'];
+                $nome = $_POST ['nome'];
+                $tipo_ = $_POST ['tipo'];
+                $valor = $_POST ['valor'];
+
                 $paramentros = array(
+                    'id' => $id,
                     'nome' => $nome,
                     'tipo' => $tipo,
-                    'valor' => $valor
-                );
-                
-                
+                    'valor' => $valor,);
+                header('Location: ?pg-produtos');
+
+
+
+                //fazendo a atualização do banco
+                $atualizarProdutos = new Conecxao();
+
+                $atualizarProduto->intervencaoNoBanco(''
+                        . 'UPDATE produtos SET'
+                        . 'nome = :nome, '
+                        . 'tipo = :tipo, '
+                        . 'valor = :valor,'
+                        . 'WHERE id = :id', $paramentros);
+                header('Location: ' .)
+                        
             } else {
+
                 //mostrar os dados do produto
                 $idProdutosEditar = isset($_GET['id']);
-                
+
 
 
                 if ($idProdutosEditar) {
@@ -72,7 +87,7 @@ if ($pg) {
                     $dados = $resultDados->selecionaDados('SELECT * FROM produtos WHERE id = ' . $_GET['id']);
                     include_once 'painel/paginas/produtos-editar.php';
                 } else {
-                    echo 'variável não definida';    
+                    echo 'variável não definida';
                 }
             }
             include_once 'painel/paginas/includes/footer.php';
@@ -150,7 +165,7 @@ if ($pg) {
     }
 } else {
     //não existe
-    include_once 'painel/paginas/dashboard.php';
+    include_once 'painel / paginas / dashboard . php';
 }
 
 
