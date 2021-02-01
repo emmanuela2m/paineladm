@@ -6,12 +6,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">pagina produtos editar <small> - Página Contato do Painel Administrativo</small></h1>
+                    <h1 class="m-0">Editar Produtos</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Contato</li>
+                        <li class="breadcrumb-item active">Editar Produtos</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -52,7 +52,7 @@
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary">Atualizar</button>
                             </div>
                         </form>
                     </div>
