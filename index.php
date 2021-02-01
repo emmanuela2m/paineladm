@@ -48,16 +48,31 @@ if ($pg) {
 
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 //Função para atualização do usuário
+                //Função para atualização do usuário
+                $nome = $_POST [nome];
+                $tipo_= $_POST [tipo];
+                $valor = $_POST [valor];
+                
+                $paramentros = array(
+                    'nome' => $nome,
+                    'tipo' => $tipo,
+                    'valor' => $valor
+                );
+                
+                
             } else {
                 //mostrar os dados do produto
                 $idProdutosEditar = isset($_GET['id']);
+                
 
 
                 if ($idProdutosEditar) {
 
                     $resultDados = new conecxao();
-                    $dados = $resultDados->selecionaDados('SELECT * FROM produtos WHERE id = ' . $idProdutosEditar);
+                    $dados = $resultDados->selecionaDados('SELECT * FROM produtos WHERE id = ' . $_GET['id']);
                     include_once 'painel/paginas/produtos-editar.php';
+                } else {
+                    echo 'variável não definida';    
                 }
             }
             include_once 'painel/paginas/includes/footer.php';

@@ -32,28 +32,32 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form id="quickForm">
-                      
-                            <div class="card-body">
-                                <div class="form-group">
-                                    <label for="nome">Produto</label>
-                                    <input type="text" name="nome" class="form-control" id="nome">
+                        <form action="?pg=produtos-editar" method="POST">
+                            <?php foreach ($dados as $dado) {?>
+
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="nome">Produto</label>
+                                        <input type="text" name="nome" value="<?php echo $dado['nome']; ?>" class="form-control" id="nome">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="tipo">Tipo Produto</label>
+                                        <input type="text" name="tipo" value="<?php echo $dado['tipo']; ?>" class="form-control" id="tipo">
+                                    </div>
+                                    <div class="form-group">
+                                        <label  for="valor"> Valor do Produto em R$</label>
+                                        <input type="text" name="valor" value="<?php echo $dado['valor']; ?>" class="form-control" id="valor">
+
+                                    </div>
                                 </div>
+                                <!-- /.card-body -->
                                 
-                                <div class="form-group">
-                                    <label for="tipo">Tipo produto</label>
-                                    <input type="text" name="tipo" class="form-control" id="tipo">
+                                <div class="card-footer">
+                                    <a href="?pg=produtos" class="btn btn-danger">Voltar</a>
+                                     
+                                    <button type="submit" class="btn btn-primary"><span class="fa fa-save"></span> Atualizar</button>
                                 </div>
-                                <div class="form-group">
-                                    <label for="valor">Valar do produto em R$</label>
-                                    <input type="text" name="tipo" class="form-control" id="tipo">
-                                </div>
-                                
-                            </div>
-                            <!-- /.card-body -->
-                            <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Atualizar</button>
-                            </div>
+                            <?php } ?>
                         </form>
                     </div>
                     <!-- /.card -->
