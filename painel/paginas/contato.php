@@ -54,9 +54,9 @@
                                             <td><?php echo $dado ['email']; ?></td>
                                             <td><?php echo $dado ['mensagem']; ?></td>
                                             <td>
-                                                <a href="?pg=contato-vizualizar&id=<?php echo $dado['id']; ?>" class="btn btn-outline-success"><span class="fa fa-eye"></span></a>
-                                                <a href="#" class="btn btn-outline-warning"><span class="fa fa-edit"></span></a>
-                                                <a href="#" class="btn btn-outline-danger"><span class="fa fa-trash"></span></a>
+                                                <a href="?pg=contato-visualizar&id=<?php echo $dado['id']; ?>" class="btn btn-outline-success"><span class="fa fa-eye"></span></a>
+                                                
+                                                <a href="?pg=contato-excluir&id=<?php echo $dado['id']; ?>" class="btn btn-outline-danger"><span class="fa fa-trash"></span></a>
                                             </td>
                                         </tr>
                                         <?php

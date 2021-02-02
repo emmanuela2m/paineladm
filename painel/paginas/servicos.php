@@ -1,4 +1,7 @@
-
+<?php
+$resultDados = new Conecxao();
+$dados = $resultDados->selecionaDados('SELECT * FROM servicos');
+?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -53,9 +56,9 @@
                                             <td><?php echo $dado ['tipo']; ?></td>
                                             <td><?php echo $dado ['valor']; ?></td>
                                             <td>
-                                                <a href="?pg=produtositem&id=<?php echo $dado['id']; ?>" class="btn btn-outline-success"><span class="fa fa-eye"></span></a>
-                                                <a href="#" class="btn btn-outline-warning"><span class="fa fa-edit"></span></a>
-                                                <a href="#" class="btn btn-outline-danger"><span class="fa fa-trash"></span></a>
+                                                <a href="?pg=servicositem&id=<?php echo $dado['id']; ?>" class="btn btn-outline-success"><span class="fa fa-eye"></span></a>
+                                                <a href="?pg=servicos-editar&id=<?php echo $dado['id']; ?>" class="btn btn-outline-warning"><span class="fa fa-edit"></span></a>
+                                                <a href="?pg=servicos-excluir&id=<?php echo $dado['id']; ?>" class="btn btn-outline-danger"><span class="fa fa-trash"></span></a>
                                             </td>
                                         </tr>
                                         <?php

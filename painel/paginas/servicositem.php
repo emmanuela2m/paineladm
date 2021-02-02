@@ -8,12 +8,12 @@
 
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">detralhes do produto-cagina painel adm aff </h1>
+                    <h1 class="m-0">detralhes do produto-cagina painel adm </h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">detalhes do produto</li>
+                        <li class="breadcrumb-item active">detalhes do serviço</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -41,3 +41,4 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
