@@ -6,12 +6,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Editar Produtos</h1>
+                    <h1 class="m-0">Inserir produtos</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Editar Produtos</li>
+                        <li class="breadcrumb-item active">Criar produtos</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -26,42 +26,33 @@
                 <!-- left column -->
                 <div class="col-md-12">
                     <!-- jquery validation -->
-                    <div class="card card-primary">
+                    <div class="card card-success">
                         <div class="card-header">
                             <h3 class="card-title">Nome produto</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
                         <form action="?pg=produtos-inserir" method="POST">
-                            
-
-                                <div class="card-body">
-                                    <div class="form-group">
-                                        <label for="nome">Produto</label>
-                                        <input type="text" name="nome" value="" class="form-control" id="nome">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="tipo">Tipo Produto</label>
-                                        <input type="text" name="tipo" value="" class="form-control" id="tipo">
-                                    </div>
-                                    <div class="form-group">
-                                        <label  for="valor"> Valor do Produto em R$</label>
-                                        <input type="text" name="valor" value="" class="form-control" id="valor">
-
-                                    </div>
-                                    
-                                    <input type="hidden" value="" name="id">
-
-                                    
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="nome">Produto</label>
+                                    <input type="text" name="nome" au value="" class="form-control" id="nome">
                                 </div>
-                                <!-- /.card-body -->
-                                
-                                <div class="card-footer">
-                                    <a href="?pg=produtos" class="btn btn-danger">Voltar</a>
-                                     
-                                    <button type="submit" class="btn btn-primary"><span class="fa fa-save"></span> Atualizar</button>
+                                <div class="form-group">
+                                    <label for="tipo">Tipo produto</label>
+                                    <input type="text" value="" name="tipo" class="form-control" id="tipo">
                                 </div>
-                            
+                                <div class="form-group">
+                                    <label for="valor">Valor do produto em R$</label>
+                                    <input type="text" value="" name="valor" class="form-control" id="valor">
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer text-right">
+                                <a href="?pg=produtos" class="btn btn-warning"><span class="fa fa-arrow-circle-o-left"></span> Voltar </a>
+                                <button type="submit" class="btn btn-success"><span class="fa fa-save"></span> inserir</button>
+                            </div>
+
                         </form>
                     </div>
                     <!-- /.card -->

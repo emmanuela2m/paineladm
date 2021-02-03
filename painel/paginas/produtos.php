@@ -1,5 +1,5 @@
 <?php
-$resultDados = new Conecxao();
+$resultDados = new Conexao();
 $dados = $resultDados->selecionaDados('SELECT * FROM produtos');
 ?>
 <!-- Content Wrapper. Contains page content -->
@@ -33,7 +33,8 @@ $dados = $resultDados->selecionaDados('SELECT * FROM produtos');
                             <h3 class="card-title">
                                 <a href="?pg=produtos-inserir" class="btn btn-success btn-lg">
                                     <span class="fa fa-plus"></span> Novo produto
-                            </a>
+                                </a>
+                            </h3>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
@@ -57,9 +58,9 @@ $dados = $resultDados->selecionaDados('SELECT * FROM produtos');
                                             <td><?php echo $dado['id']; ?></td>
                                             <td><?php echo $dado['nome']; ?></td>
                                             <td><?php echo $dado['tipo']; ?></td>
-                                            <td><?php echo $dado['valor']; ?></td>
+                                            <td><?php echo str_replace('.', ',', $dado['valor']); ?></td>
                                             <td>
-                                                <a href="?pg=produtositem&id=<?php echo $dado['id']; ?>" class="btn btn-outline-success"><span class="fa fa-eye"></span></a>
+                                                <a href="?pg=produtos-item&id=<?php echo $dado['id']; ?>" class="btn btn-outline-success"><span class="fa fa-eye"></span></a>
                                                 <a href="?pg=produtos-editar&id=<?php echo $dado['id']; ?>" class="btn btn-outline-warning"><span class="fa fa-edit"></span></a>
                                                 <a href="?pg=produtos-excluir&id=<?php echo $dado['id']; ?>" class="btn btn-outline-danger"><span class="fa fa-trash"></span></a>
                                             </td>

@@ -20,7 +20,6 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
-
     <section class="content">
         <div class="container-fluid">
             <div class="row">
@@ -35,34 +34,34 @@
                             <table id="tabela-produtos" class="table text-center table-bordered table-striped table-hover">
                                 <thead>
                                     <tr>
-                                        <th>id</th>
-                                        <th>Nome</th>
-                                        <th>email</th>
-                                        <th>mensagen</th>
+                                        <th>Código</th>
+                                        <th>Produto</th>
+                                        <th>E-mail</th>
+                                        <th>Mensagem</th>
                                         <th>Ações</th>
                                     </tr>
                                 </thead>
                                 <tbody>
 
-
                                     <?php
                                     foreach ($dados as $dado) {
                                         ?>
+
                                         <tr>
-                                            <td><?php echo $dado ['id']; ?></td>
-                                            <td><?php echo $dado ['nome']; ?></td>
-                                            <td><?php echo $dado ['email']; ?></td>
-                                            <td><?php echo $dado ['mensagem']; ?></td>
+                                            <td><?php echo $dado['id']; ?></td>
+                                            <td><?php echo $dado['nome']; ?></td>
+                                            <td><?php echo $dado['email']; ?></td>
+                                            <td><?php echo $dado['msg']; ?></td>
                                             <td>
                                                 <a href="?pg=contato-visualizar&id=<?php echo $dado['id']; ?>" class="btn btn-outline-success"><span class="fa fa-eye"></span></a>
                                                 
-                                                <a href="?pg=contato-excluir&id=<?php echo $dado['id']; ?>" class="btn btn-outline-danger"><span class="fa fa-trash"></span></a>
+                                                <a href="#" class="btn btn-outline-danger"><span class="fa fa-trash"></span></a>
                                             </td>
                                         </tr>
+
                                         <?php
                                     }
-                                    ?>  
-
+                                    ?>
 
 
                                 </tbody>                                   
@@ -78,7 +77,6 @@
         </div>
         <!-- /.container-fluid -->
     </section>
-
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
