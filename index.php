@@ -15,13 +15,23 @@ if ($pg) {
             include_once 'painel/paginas/dashboard.php';
             include_once 'painel/paginas/includes/footer.php';
             break;
-
+        
+        case 'navegacao':
+            include_once 'site/paginas/includes/header.php';
+            include_once 'painel/paginas/includes/menus.php';
+            include_once 'painel/paginas/dashboard.php';
+            include_once 'painel/paginas/includes/footer.php';
+            break;
+        
+        
         case 'produtos':
             include_once 'painel/paginas/includes/header.php';
             include_once 'painel/paginas/includes/menus.php';
             include_once 'painel/paginas/produtos.php';
             include_once 'painel/paginas/includes/footer.php';
             break;
+        
+        
 
         case 'produtos-inserir':
             include_once 'painel/paginas/includes/header.php';
@@ -90,9 +100,9 @@ if ($pg) {
                         . 'servicos (nome, tipo, valor) '
                         . 'VALUES (:nome, :tipo, :valor)', $parametros);
 
-                include_once 'painel/paginas/produtos.php';
+                include_once 'painel/paginas/servicos.php';
             } else {
-                include_once 'painel/paginas/produtos-inserir.php';
+                include_once 'painel/paginas/servicos-inserir.php';
             }
 
             include_once 'painel/paginas/includes/footer.php';
@@ -171,6 +181,8 @@ if ($pg) {
             include_once 'painel/paginas/servicos.php';
             include_once 'painel/paginas/includes/footer.php';
             break;
+        
+       
         
         case 'servicos-item':
 
@@ -259,6 +271,8 @@ if ($pg) {
             include_once 'painel/paginas/contato.php';
             include_once 'painel/paginas/includes/footer.php';
             break;
+        
+        
 
         case 'contato-visualizar':
 
@@ -307,7 +321,10 @@ if ($pg) {
     }
 } else {
     //não existe
-    include_once 'painel/paginas/dashboard.php';
+    include_once 'site/paginas/includes/header.php';
+    include_once 'site/paginas/navegacao/header.php';
+    include_once 'site/paginas/inicio.php';
+    include_once 'site/paginas/includes/footer.php';
 }
 
 
