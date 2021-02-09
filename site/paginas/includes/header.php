@@ -54,7 +54,7 @@
                 <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active"><a class="nav-link" href="?pg=inicio-site">Inicio</a> </li>
-                        <li class="nav-item active"><a class="nav-link" href="?pg=sobre">Sobre</a> </li>
+                        <li class="nav-item active"><a class="nav-link" href="?pg=sobre-site">Sobre</a> </li>
                         <li class="nav-item active"><a class="nav-link" href="?pg=servicos-site">serviços</a> </li>
                         <li class="nav-item active"><a class="nav-link" href="?pg=produtos-site">Produtos</a> </li>
                         <li class="nav-item active"><a class="nav-link" href="?pg=contato-site">Contato</a> </li>
@@ -62,7 +62,7 @@
                     
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Área Administrativa</a>
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><span class="manu-user"></span></a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="?pg=login">Login</a>
                                     <a class="dropdown-item" href="?pg=login2">Login2</a>

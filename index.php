@@ -9,29 +9,87 @@ if ($pg) {
     //existe
     switch ($_GET['pg']) {
 
+        //************site*************
+
+
+        case 'inicio-site':
+            include_once 'site/paginas/includes/header.php';
+            include_once 'site/paginas/includes/navegacao.php';
+            include_once 'site/paginas/inicio.php';
+            include_once 'site/paginas/includes/footer.php';
+            break;
+
+        case 'contato-site':
+
+
+            include_once 'site/paginas/includes/header.php';
+            include_once 'site/paginas/includes/navegacao.php';
+            include_once 'site/paginas/contato.php';
+            include_once 'site/paginas/includes/footer.php';
+            break;
+
+            
+
+            include_once 'site/paginas/includes/footer.php';
+            break;
+
+        case 'produtos-site':
+            include_once 'site/paginas/includes/header.php';
+            include_once 'site/paginas/includes/navegacao.php';
+            include_once 'site/paginas/produtos.php';
+            include_once 'site/paginas/includes/footer.php';
+            break;
+
+        case 'servicos-site':
+            include_once 'site/paginas/includes/header.php';
+            include_once 'site/paginas/includes/navegacao.php';
+            include_once 'site/paginas/servicos.php';
+            include_once 'site/paginas/includes/footer.php';
+            break;
+
+        case 'contato-site':
+            include_once 'site/paginas/includes/header.php';
+            include_once 'site/paginas/contato.php';
+            include_once 'site/paginas/includes/footer.php';
+            break;
+
+        case 'sobre-site':
+            include_once 'site/paginas/includes/header.php';
+            include_once 'site/paginas/sobre.php';
+            include_once 'site/paginas/includes/footer.php';
+            break;
+
+        case 'navegacao':
+            include_once 'site/paginas/includes/header.php';
+            include_once 'site/paginas/includes/navegacao.php';
+            include_once 'site/paginas/includes/footer.php';
+            break;
+
+        //**********parte do painel***********************
+
         case 'inicio':
             include_once 'painel/paginas/includes/header.php';
             include_once 'painel/paginas/includes/menus.php';
             include_once 'painel/paginas/dashboard.php';
             include_once 'painel/paginas/includes/footer.php';
             break;
-        
+
         case 'navegacao':
             include_once 'site/paginas/includes/header.php';
             include_once 'painel/paginas/includes/menus.php';
             include_once 'painel/paginas/dashboard.php';
             include_once 'painel/paginas/includes/footer.php';
             break;
-        
-        
+
+
         case 'produtos':
             include_once 'painel/paginas/includes/header.php';
             include_once 'painel/paginas/includes/menus.php';
             include_once 'painel/paginas/produtos.php';
             include_once 'painel/paginas/includes/footer.php';
             break;
-        
-        
+
+
 
         case 'produtos-inserir':
             include_once 'painel/paginas/includes/header.php';
@@ -76,7 +134,7 @@ if ($pg) {
             include_once 'painel/paginas/produtos-item.php';
             include_once 'painel/paginas/includes/footer.php';
             break;
-        
+
         case 'servicos-inserir':
             include_once 'painel/paginas/includes/header.php';
             include_once 'painel/paginas/includes/menus.php';
@@ -181,9 +239,9 @@ if ($pg) {
             include_once 'painel/paginas/servicos.php';
             include_once 'painel/paginas/includes/footer.php';
             break;
-        
-       
-        
+
+
+
         case 'servicos-item':
 
             $id = $_GET['id'];
@@ -196,7 +254,7 @@ if ($pg) {
             include_once 'painel/paginas/servicos-item.php';
             include_once 'painel/paginas/includes/footer.php';
             break;
-        
+
         case 'servicos-editar':
             include_once 'painel/paginas/includes/header.php';
             include_once 'painel/paginas/includes/menus.php';
@@ -247,8 +305,8 @@ if ($pg) {
 
             include_once 'painel/paginas/includes/footer.php';
             break;
-        
-            case'servicos-excluir':
+
+        case'servicos-excluir':
 
             $parametros = array(
                 ':id' => $_GET['id'],
@@ -258,7 +316,7 @@ if ($pg) {
                     . 'DELETE FROM servicos WHERE id = :id', $parametros);
             header('Location: ?pg=servicos');
             break;
-        
+
 
         case 'contato':
 
@@ -271,8 +329,8 @@ if ($pg) {
             include_once 'painel/paginas/contato.php';
             include_once 'painel/paginas/includes/footer.php';
             break;
-        
-        
+
+
 
         case 'contato-visualizar':
 
@@ -286,7 +344,7 @@ if ($pg) {
             include_once 'painel/paginas/contato-visualizar.php';
             include_once 'painel/paginas/includes/footer.php';
             break;
-        
+
         case'contato-excluir':
 
             $parametros = array(
