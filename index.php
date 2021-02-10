@@ -28,7 +28,7 @@ if ($pg) {
             include_once 'site/paginas/includes/footer.php';
             break;
 
-            
+
 
             include_once 'site/paginas/includes/footer.php';
             break;
@@ -48,10 +48,39 @@ if ($pg) {
             break;
 
         case 'contato-site':
+
+
             include_once 'site/paginas/includes/header.php';
-            include_once 'site/paginas/contato.php';
+            include_once 'site/paginas/navegacao.php';
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+                //FAça o que está aqui dentro 
+                //pegando os dados via post
+                $nome = $_POST['nome'];
+                $email = $_POST['email'];
+                $mensagem = $_POST['mensagem'];
+                //tradar os dados via post
+                $parametros = array(
+                    'nome' => $nome,
+                    'email' => $email,
+                    'mensagem' => $mensagem
+                );
+
+                //inserção no banco de dados 
+                $resultDados = new Conexao();
+                $resultDados->intervencaoNoBanco('INSERT INTO '
+                        . 'contato (nome, email, mensagem) '
+                        . 'VALUES (:nome, :email, :mensagem )', $parametros);
+
+                include_once 'site/paginas/contato.php';
+            } else {
+                //faça o que está aqui
+                include_once 'site/paginas/contato.php';
+            }
             include_once 'site/paginas/includes/footer.php';
             break;
+
+        
 
         case 'sobre-site':
             include_once 'site/paginas/includes/header.php';
@@ -380,7 +409,7 @@ if ($pg) {
 } else {
     //não existe
     include_once 'site/paginas/includes/header.php';
-    include_once 'site/paginas/navegacao/header.php';
+    include_once 'site/paginas/includes/navegacao.php';
     include_once 'site/paginas/inicio.php';
     include_once 'site/paginas/includes/footer.php';
 }
